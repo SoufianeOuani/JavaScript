@@ -41,11 +41,11 @@ JavaScript has two main categories of data types:
  ______________________________________________________________________________________
 |  Data Type     	Example	                        |    Description                       
 |______________|__________________________________|____________________________________|
-|  Object         { name: "Sofiane", age: 21 }	  |    Collection of key-value pairs.  
+|  Object         { name: "Sofiane", age: 21 }	  | Collection of key-value pairs.  
 |______________|__________________________________|____________________________________|
-|  Array	        [1, 2, 3]	                      |    Ordered list of values.          
+|  Array	        [1, 2, 3]	                      | Ordered list of values.          
 |______________|__________________________________|____________________________________|
-|  Function       function greet() {}	            |    A block of reusable code.        
+|  Function       function greet() {}	            | A block of reusable code.        
 |______________|__________________________________|____________________________________|
 
 
@@ -79,11 +79,11 @@ Use "typeof" to determine the type of a variable:
  __________________________________________________________________________________
 |  Feature       	  Primitive	                           Non-Primitive               
 |______________|____________________________________|______________________________|
-|  Stored in     	  Stack (direct value)	               Heap (reference to value)  
+|  Stored in     	  Stack (direct value)	             Heap (reference to value)  
 |______________|____________________________________|______________________________|
-|  Mutability     	Immutable (can't be changed)	       Mutable (can be changed)  
+|  Mutability     	Immutable (can't be changed)	     Mutable (can be changed)  
 |______________|____________________________________|______________________________|
-|  Comparison     	Compared by value          	         Compared by reference      
+|  Comparison     	Compared by value          	       Compared by reference      
 |______________|____________________________________|______________________________|
 
 
