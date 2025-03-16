@@ -60,7 +60,7 @@
 |_________|____________________________________________________________________________________|
 |document	|  To modify the webpage dynamically (change text, styles, etc.).              |
 |_________|____________________________________________________________________________________|
-|console  |	To debug JavaScript code by logging messages.                                |
+|console|   	To debug JavaScript code by logging messages.                                |
 |_________|____________________________________________________________________________________|
-|window  	|  To interact with the browser (alerts, navigation, timers, etc.).            |    
+|window| 	   To interact with the browser (alerts, navigation, timers, etc.).            |    
 |_________|____________________________________________________________________________________|
