@@ -1,0 +1,61 @@
+📌Understanding document, console, and window in JavaScript
+
+💠JavaScript interacts with web pages through three key objects:
+  1️⃣document → Used to manipulate the webpage content (DOM).
+  2️⃣console → Used for debugging and logging messages.
+  3️⃣window → Represents the browser window and provides global functions.
+
+
+📌Example Code Using document, console, and window
+ _____________________________________________________________________________________________
+|    <!DOCTYPE html>                                                                          |    
+|    <html lang="en">                                                                         | 
+|    <head>                                                                                   | 
+|        <title>JavaScript Objects Example</title>                                            |
+|    </head>                                                                                  |
+|    <body>                                                                                   | 
+|        <h1 id="title">Welcome to JavaScript!</h1>                                           | 
+|        <button onclick="changeContent()">Change Content</button>                            |  
+|        <button onclick="showAlert()">Show Alert</button>                                    |
+|                                                                                             | 
+|        <script>                                                                             | 
+|            // Using document: Manipulating the webpage (DOM)                                |
+|            function changeContent() {                                                       |   
+|                document.getElementById("title").innerText = "JavaScript is awesome!";       | 
+|                console.log("Title changed successfully!"); // Using console for debugging   | 
+|            }                                                                                |      
+|                                                                                             | 
+|            // Using window: Interacting with the browser                                    |  
+|            function showAlert() {                                                           | 
+|                window.alert("This is a window alert!");                                     | 
+|                console.log("Alert displayed!"); // Using console to track actions           |
+|            }                                                                                |
+|                                                                                             | 
+|            // Using console: Debugging information                                          |
+|            console.log("Page Loaded! Ready to execute JavaScript.");                        |
+|        </script>                                                                            |
+|    </body>                                                                                  |
+|    </html>                                                                                  |
+|_____________________________________________________________________________________________|
+
+
+📌Explanation:
+
+1️⃣document (DOM Manipulation)  (acces to html)
+  💠document.getElementById("title").innerText = "JavaScript is awesome!";
+  💠Modifies the content of an HTML element dynamically.
+
+2️⃣console (Debugging & Logging)
+  💠console.log("Title changed successfully!");
+  💠Prints messages to the browser console, useful for debugging.
+
+3️⃣window (Global Browser Object)
+  💠window.alert("This is a window alert!");
+  💠Triggers a browser pop-up alert.
+
+
+📌Why Use These?
+Feature	Purpose
+document	To modify the webpage dynamically (change text, styles, etc.).
+console	To debug JavaScript code by logging messages.
+window	To interact with the browser (alerts, navigation, timers, etc.).
