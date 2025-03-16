@@ -1,0 +1,79 @@
+Errors in JavaScript 🚨
+JavaScript errors occur when the code contains mistakes that prevent execution. Errors can be syntax errors, runtime errors, or logical errors.
+
+1.Types of Errors in JavaScript
+  1️⃣Syntax Errors (Parsing Errors)
+    💠What? Mistakes in the code structure that prevent execution.
+    💠Example:
+ _______________________________________________________________
+|  console.log("Hello World"  // Missing closing parenthesis    |
+|_______________________________________________________________|
+🔴 Error Message: Uncaught SyntaxError: Unexpected end of input
+
+
+2️⃣ Reference Errors
+  💠What? Occur when trying to use an undefined variable.
+  💠Example:
+ _______________________________________________________________
+|  console.log(name); // 'name' is not defined                  |
+|_______________________________________________________________|
+🔴 Error Message: Uncaught ReferenceError: name is not defined
+
+
+3️⃣ Type Errors
+  💠What? Occur when trying to use a value in an invalid way.
+  💠Example:
+
+ _______________________________________________________________
+|  let num = 10;                                                |
+|  num();  // num is not a function                             | 
+|_______________________________________________________________|
+🔴 Error Message: Uncaught TypeError: num is not a function
+
+
+4️⃣ Range Errors
+  💠What? Occur when a number is outside the allowed range.
+  💠Example:
+
+ _______________________________________________________________
+|  let arr = new Array(-5); // Negative array size              |
+|_______________________________________________________________|
+🔴 Error Message: Uncaught RangeError: Invalid array length
+
+5️⃣ Logical Errors (Bugs)
+  💠What? Code runs but produces the wrong output due to incorrect logic.
+  💠Example:
+  
+ ____________________________________________________________________________________
+|  let total = 10 + "5";  // Expected 15, but result is "105" (string concatenation) |
+|  console.log(total);                                                               | 
+|____________________________________________________________________________________|
+🟡 No error message, but incorrect behavior!
+
+
+2. Handling Errors in JavaScript
+Using try...catch
+👉 Prevents crashes by catching errors.
+
+ ___________________________________________________________
+|  try {                                                    |
+|      let x = undefinedVar; // Undefined variable          |    
+|  } catch (error) {                                        |
+|      console.log("An error occurred: " + error.message);  |
+|  }                                                        |          
+|___________________________________________________________|
+✅ Output: An error occurred: undefinedVar is not defined
+
+3. Debugging Errors 🛠️
+✅ Use console.log()
+ __________________________________
+|  let x = 5;                      |
+|  console.log("Value of x:", x);  |
+|__________________________________|
+✅ Use debugger; in DevTools
+ __________________________________________
+|  let num = 10;                           | 
+|  debugger; // Stops execution in browser | 
+|  console.log(num);                       |
+|__________________________________________|
+✅ Check error messages in Console (F12 in browser).
