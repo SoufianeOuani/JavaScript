@@ -1,0 +1,102 @@
+📌Data Types in JavaScript
+
+JavaScript has two main categories of data types:
+  💠Primitive Data Types (Basic, immutable values)
+  💠Non-Primitive (Reference) Data Types (Objects, mutable values)
+
+1️⃣ Primitive Data Types (Stored directly in memory)
+ ___________________________________________________________________________________________________
+|  Data Type	 |  Example	                  |  Description                                          |
+|______________|____________________________|_______________________________________________________|
+|  String	     |  "Hello"                  	|  Text enclosed in quotes.                             | 
+|______________|____________________________|_______________________________________________________|
+|  Number	     |   42, 3.14	                |  Any numeric value.                                   | 
+|______________|____________________________|_______________________________________________________|
+|  BigInt	     |   1234567890123456789n	    |  Large numbers beyond Number limits.                  |    
+|______________|____________________________|_______________________________________________________|
+|  Boolean	   |   true, false	            |  Represents logical values.                           | 
+|______________|____________________________|_______________________________________________________|  
+|  Undefined	 |   let x;	                  |  A variable declared but not assigned a value.        |
+|______________|____________________________|_______________________________________________________|
+|  Null	       |   let y = null;	          |  Intentional absence of value.                        |
+|______________|____________________________|_______________________________________________________|
+|  Symbol	     |   Symbol("id")	            |  Unique identifier.                                   | 
+|______________|____________________________|_______________________________________________________|
+
+
+🔶Examples:
+ __________________________________________________
+|  let name = "Soufiane";  // String               | 
+|  let age = 21;          // Number                |
+|  let isStudent = true;  // Boolean               | 
+|  let bigNumber = 9007199254740991n; // BigInt    |
+|  let notDefined;        // Undefined             | 
+|  let emptyValue = null; // Null                  |
+|  let uniqueID = Symbol("id"); // Symbol          |
+|__________________________________________________|
+
+
+
+2️⃣ Non-Primitive (Reference) Data Types (Stored as references)
+ ______________________________________________________________________________________
+|  Data Type   | 	Example	                        |    Description                     |  
+|______________|__________________________________|____________________________________|
+|  Object      |  { name: "Sofiane", age: 21 }	  |    Collection of key-value pairs.  |
+|______________|__________________________________|____________________________________|
+|  Array	     |  [1, 2, 3]	                      |    Ordered list of values.         | 
+|______________|__________________________________|____________________________________|
+|  Function    |  function greet() {}	            |    A block of reusable code.       | 
+|______________|__________________________________|____________________________________|
+
+
+🔶Examples:
+ _______________________________________________________
+|  let person = { name: "Sofiane", age: 21 }; // Object | 
+|  let numbers = [10, 20, 30]; // Array                 | 
+|  function greet() {                                   | 
+|      console.log("Hello, World!");                    |
+|  } // Function                                        |
+|_______________________________________________________|
+
+
+
+3️⃣ Checking Data Types
+Use "typeof" to determine the type of a variable:
+ _________________________________________________________________________________
+|  console.log(typeof "Hello");  // "string"                                      |
+|  console.log(typeof 42);       // "number"                                      |
+|  console.log(typeof true);     // "boolean"                                     | 
+|  console.log(typeof undefined);// "undefined"                                   | 
+|  console.log(typeof null);     // "object" (JavaScript bug, should be "null")   |
+|  console.log(typeof {name: "Sofiane"}); // "object"                             | 
+|  console.log(typeof [1, 2, 3]); // "object" (Arrays are a type of object)       |
+|  console.log(typeof function(){}); // "function"                                |
+|_________________________________________________________________________________|
+
+
+
+🔹 Key Differences Between Primitive & Non-Primitive
+ __________________________________________________________________________________
+|  Feature     | 	  Primitive	                      |    Non-Primitive             | 
+|______________|____________________________________|______________________________|
+|  Stored in   | 	  Stack (direct value)	          |    Heap (reference to value) | 
+|______________|____________________________________|______________________________|
+|  Mutability  |  	Immutable (can't be changed)	  |    Mutable (can be changed)  |
+|______________|____________________________________|______________________________|
+|  Comparison  |  	Compared by value          	    |    Compared by reference     | 
+|______________|____________________________________|______________________________|
+
+
+🔶Example:
+
+ ______________________________________________________________________________
+|  let a = "Hello";                                                            |  
+|  let b = a;                                                                  |
+|  b = "World";                                                                |
+|  console.log(a); // "Hello" (original value unchanged)                       | 
+|                                                                              |  
+|  let obj1 = { name: "Sofiane" };                                             | 
+|  let obj2 = obj1;                                                            |
+|  obj2.name = "Ali";                                                          |
+|  console.log(obj1.name); // "Ali" (Both obj1 & obj2 point to same object)    |
+|______________________________________________________________________________|
