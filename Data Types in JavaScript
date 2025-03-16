@@ -6,21 +6,21 @@ JavaScript has two main categories of data types:
 
 1️⃣ Primitive Data Types (Stored directly in memory)
  ___________________________________________________________________________________________________
-|  Data Type	 |  Example	                  |  Description                                          |
+|  Data Type	    Example	                  |  Description                                          
 |______________|____________________________|_______________________________________________________|
-|  String	     |  "Hello"                  	|  Text enclosed in quotes.                             | 
+|  String	        "Hello"                  	|  Text enclosed in quotes.                              
 |______________|____________________________|_______________________________________________________|
-|  Number	     |   42, 3.14	                |  Any numeric value.                                   | 
+|  Number	         42, 3.14	                |  Any numeric value.                                    
 |______________|____________________________|_______________________________________________________|
-|  BigInt	     |   1234567890123456789n	    |  Large numbers beyond Number limits.                  |    
+|  BigInt	         1234567890123456789n	    |  Large numbers beyond Number limits.                      
 |______________|____________________________|_______________________________________________________|
-|  Boolean	   |   true, false	            |  Represents logical values.                           | 
+|  Boolean	       true, false	            |  Represents logical values.                            
 |______________|____________________________|_______________________________________________________|  
-|  Undefined	 |   let x;	                  |  A variable declared but not assigned a value.        |
+|  Undefined	     let x;	                  |  A variable declared but not assigned a value.        
 |______________|____________________________|_______________________________________________________|
-|  Null	       |   let y = null;	          |  Intentional absence of value.                        |
+|  Null	           let y = null;	          |  Intentional absence of value.                        
 |______________|____________________________|_______________________________________________________|
-|  Symbol	     |   Symbol("id")	            |  Unique identifier.                                   | 
+|  Symbol	         Symbol("id")	            |  Unique identifier.                                    
 |______________|____________________________|_______________________________________________________|
 
 
@@ -39,13 +39,13 @@ JavaScript has two main categories of data types:
 
 2️⃣ Non-Primitive (Reference) Data Types (Stored as references)
  ______________________________________________________________________________________
-|  Data Type   | 	Example	                        |    Description                     |  
+|  Data Type     	Example	                        |    Description                       
 |______________|__________________________________|____________________________________|
-|  Object      |  { name: "Sofiane", age: 21 }	  |    Collection of key-value pairs.  |
+|  Object         { name: "Sofiane", age: 21 }	  |    Collection of key-value pairs.  
 |______________|__________________________________|____________________________________|
-|  Array	     |  [1, 2, 3]	                      |    Ordered list of values.         | 
+|  Array	        [1, 2, 3]	                      |    Ordered list of values.          
 |______________|__________________________________|____________________________________|
-|  Function    |  function greet() {}	            |    A block of reusable code.       | 
+|  Function       function greet() {}	            |    A block of reusable code.        
 |______________|__________________________________|____________________________________|
 
 
