@@ -1,0 +1,93 @@
+📌Convert Text to Number in JavaScript
+There are multiple ways to convert a string into a number in JavaScript:
+
+1️⃣Using Number() (Recommended)
+The Number() function converts a string to a number.
+ ________________________________________
+|  let str = "123";                      |
+|  let num = Number(str);                |
+|  console.log(num); // 123              |
+|  console.log(typeof num); // "number"  |
+|________________________________________|
+🔹 If the string is not a valid number, it returns NaN (Not a Number).
+ ________________________________________
+|  console.log(Number("abc")); // NaN    |
+|________________________________________|
+
+
+2️⃣Using parseInt() (For Whole Numbers)
+The parseInt() function extracts and converts only the integer part.
+ _____________________________
+|  let str = "42px";          | 
+|  let num = parseInt(str);   | 
+|  console.log(num); // 42    |
+|_____________________________|
+🔹 If the string starts with letters, it returns NaN.
+
+ _________________________________________
+|  console.log(parseInt("px42")); // NaN  |
+|_________________________________________|
+You can also specify the radix (base):
+ _______________________________________________________________
+|  console.log(parseInt("1010", 2)); // 10 (Binary to Decimal)  |
+|_______________________________________________________________|
+
+3️⃣Using parseFloat() (For Decimals)
+The parseFloat() function converts a string to a floating-point number.
+ ______________________________
+|  let str = "3.14";           | 
+|  let num = parseFloat(str);  |
+|  console.log(num); // 3.14   | 
+|______________________________|
+🔹 Works with mixed characters but only keeps the first valid number.
+ ____________________________________________________
+|  console.log(parseFloat("3.14 meters")); // 3.14   | 
+|  console.log(parseFloat("abc3.14")); // NaN        |
+|____________________________________________________|
+
+
+4️⃣Using the Unary + Operator (Fastest)
+Adding + before a string quickly converts it into a number.
+ ____________________________
+|  let str = "99";           | 
+|  let num = +str;           | 
+|  console.log(num); // 99   | 
+|____________________________|
+🔹 If conversion fails, it returns NaN:
+ _________________________________
+|  console.log(+"Hello"); // NaN  |
+|_________________________________|
+
+
+5️⃣Using Math.floor(), Math.ceil(), or Math.round()
+These functions ensure the number is rounded properly after conversion.
+ ____________________________________________
+|  console.log(Math.floor("5.9")); // 5      |
+|  console.log(Math.ceil("5.2"));  // 6      |
+|  console.log(Math.round("5.5")); // 6      |
+|____________________________________________|
+
+
+🔶Best Practices
+ ______________________________________________________________
+|  Method	              Use Case
+|___________________|__________________________________________
+|  Number(str)	        When the string is a clean number
+|___________________|__________________________________________
+|  parseInt(str)	      When extracting integers from mixed text
+|___________________|___________________________________________
+|  parseFloat(str)	    When working with decimal numbers
+|___________________|___________________________________________
+|  +str	                When you need a fast conversion
+|___________________|___________________________________________
+If you're working with user input, always check if the result is NaN before using it:
+
+ ____________________________________________
+|  let value = Number("hello");              |  
+|  if (isNaN(value)) {                       | 
+|      console.log("Invalid number");        |
+|  } else {                                  |    
+|      console.log(value);                   | 
+|  }                                         | 
+|____________________________________________|
+
