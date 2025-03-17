@@ -1,0 +1,211 @@
+JavaScript Strings
+In JavaScript, a string is a sequence of characters enclosed in single ('), double ("), or backticks (`).
+ _______________________________________________
+|  let str1 = "Hello, World!";                  |
+|  let str2 = 'JavaScript Strings';             |
+|  let str3 = `Template Literals`;              |
+|_______________________________________________|
+
+
+1️⃣String Length
+Use .length to get the number of characters in a string.
+ ___________________________________
+|  let text = "Hello";              |
+|  console.log(text.length); // 5   |
+|___________________________________|
+
+
+2️⃣Escape Characters
+ ______________________________________
+|  Escape     Sequence	Meaning
+|_________|_____________________________|
+|  \'	        Single quote
+|_________|_____________________________|
+|  \"	        Double quote
+|_________|_____________________________|
+|  \\	        Backslash
+|_________|_____________________________|
+|  \n	        New line
+|_________|_____________________________|
+|  \t	        Tab
+|_________|_____________________________|
+
+
+Example:
+ ________________________________________________________
+|  let message = "She said, \"JavaScript is great!\"";   | 
+|  console.log(message);                                 |
+|________________________________________________________|
+
+
+3️⃣String Concatenation
+  🔶Using + Operator
+ ________________________________________________
+|  let firstName = "John";                       | 
+|  let lastName = "Doe";                         | 
+|  let fullName = firstName + " " + lastName;    |
+|  console.log(fullName); // "John Doe"          |
+|________________________________________________|
+
+  🔶Using += Operator
+ _________________________________________________
+|  let greeting = "Hello";                        |  
+|  greeting += ", World!";                        |
+|  console.log(greeting); // "Hello, World!"      |
+|_________________________________________________|
+
+
+  🔶Using concat() Method
+
+ _________________________________________________
+|  let str1 = "Hello";                            |    
+|  let str2 = "World";                            |
+|  let result = str1.concat(" ", str2);           | 
+|  console.log(result); // "Hello World"          |
+|_________________________________________________|
+
+
+4️⃣Template Literals (Backticks ``)
+Template literals allow multiline strings and variable interpolation.
+ ______________________________________________
+|  let name = "Sofiane";                       | 
+|  let message = `Hello, ${name}!`;            |
+|  console.log(message); // "Hello, Sofiane!"  |
+|______________________________________________|
+
+Multiline strings:
+
+ ______________________________________________
+|  let multiLine = `This is line 1             |   
+|  This is line 2`;                            |
+|  console.log(multiLine);                     | 
+|______________________________________________|
+
+5️⃣String Methods
+ __________________________________________________________________________________________________________
+|  Method	                    Description	Example
+|___________________________|___________________________|__________________________________________________|
+|  toUpperCase()	            Converts to uppercase	        "hello".toUpperCase() → "HELLO"
+|___________________________|___________________________|__________________________________________________|
+|  toLowerCase()	            Converts to lowercase	        "HELLO".toLowerCase() → "hello"
+|___________________________|___________________________|__________________________________________________|
+|  trim()	                    Removes spaces	              " hello ".trim() → "hello"
+|___________________________|___________________________|__________________________________________________|
+|  charAt(index)	            Gets character at index	      "Java".charAt(2) → "v"
+|___________________________|___________________________|__________________________________________________|
+|  indexOf(substring)	        Finds index of first match	  "hello".indexOf("l") → 2
+|___________________________|___________________________|__________________________________________________|
+|  lastIndexOf(substring)	    Finds last occurrence	        "hello".lastIndexOf("l") → 3
+|___________________________|___________________________|__________________________________________________|
+|  slice(start, end)	        Extracts part of a string	    "JavaScript".slice(0, 4) → "Java"
+|___________________________|___________________________|__________________________________________________|
+|  substring(start, end)	    Similar to slice	            "JavaScript".substring(4, 10) → "Script"
+|___________________________|___________________________|__________________________________________________|
+|  replace(search, replace)	  Replaces a substring	        "hello".replace("l", "w") → "hewlo"
+|___________________________|___________________________|__________________________________________________|
+|  split(delimiter)	          Splits into array	            "a,b,c".split(",") → ["a", "b", "c"]
+|___________________________|___________________________|__________________________________________________|
+
+
+Example:
+ ____________________________________________________________________________
+|  let text = "  JavaScript is fun!  ";                                      |
+|  console.log(text.toUpperCase()); // "JAVASCRIPT IS FUN!"                  |  
+|  console.log(text.trim()); // "JavaScript is fun!"                         | 
+|  console.log(text.replace("fun", "awesome")); // "JavaScript is awesome!"  |  
+|  console.log(text.split(" ")); // ["", "JavaScript", "is", "fun!", ""]     |
+|____________________________________________________________________________|
+
+
+6️⃣Checking if a String Contains a Substring
+  🔶Using includes()
+ ________________________________________________________
+|  let sentence = "JavaScript is awesome!";              |
+|  console.log(sentence.includes("awesome")); // true    |  
+|  console.log(sentence.includes("Python")); // false    |
+|________________________________________________________|
+
+  🔶Using startsWith() and endsWith()
+ _________________________________________________________
+|  console.log(sentence.startsWith("Java")); // true      |
+|  console.log(sentence.endsWith("!")); // true           | 
+|_________________________________________________________|
+
+7️⃣String Comparison
+String comparison is case-sensitive.
+ ________________________________________________________________________
+|  console.log("apple" === "Apple"); // false                            |
+|  console.log("apple".toLowerCase() === "Apple".toLowerCase()); // true | 
+|________________________________________________________________________|
+
+
+8️⃣Converting Numbers to Strings
+  🔶Use String() or .toString() to convert numbers to strings.
+ _____________________________________________________
+|  let num = 123;                                     | 
+|  console.log(String(num)); // "123"                 | 
+|  console.log(num.toString()); // "123"              |
+|_____________________________________________________|
+
+
+9️⃣Extracting Substrings
+  🔶Using slice()
+ _______________________________________________
+|  let text = "JavaScript";                     | 
+|  console.log(text.slice(0, 4)); // "Java"     | 
+|  console.log(text.slice(-6)); // "Script"     | 
+|_______________________________________________|
+
+  🔶Using substring()
+Similar to slice(), but negative indices are not allowed.
+ ________________________________________________
+|  console.log(text.substring(0, 4)); // "Java"  |
+|________________________________________________|
+
+🔟Repeating Strings
+ _________________________________________________________
+|  let word = "Hello ";                                   | 
+|  console.log(word.repeat(3)); // "Hello Hello Hello "   | 
+|_________________________________________________________|
+
+💠11_Converting Strings to Numbers
+  🔶Use Number(), parseInt(), or parseFloat().
+ ____________________________________________
+|  console.log(Number("123")); // 123        |
+|  console.log(parseInt("100px")); // 100    |
+|  console.log(parseFloat("3.14")); // 3.14  |
+|____________________________________________|
+
+
+🎯 Summary
+ __________________________________________________________________
+|  Operation	          Method
+|____________________|____________________________________________|
+|  Length	              str.length
+|____________________|____________________________________________|
+|  Upper/Lower Case	    toUpperCase(), toLowerCase()
+|____________________|____________________________________________|
+|  Trim Spaces	        trim()
+|____________________|____________________________________________|
+|  Find Substring	      indexOf(), lastIndexOf(), includes()
+|____________________|____________________________________________|
+|  Extract Substring	  slice(), substring()
+|____________________|____________________________________________|
+|  Replace Text        	replace()
+|____________________|____________________________________________|
+|  Split String	        split()
+|____________________|____________________________________________|
+|  Starts/Ends With	    startsWith(), endsWith()
+|____________________|____________________________________________|
+|  Repeat String	      repeat()
+|____________________|____________________________________________|
+|  Convert to String	  String(), toString()
+|____________________|____________________________________________|
+
+
+💡 Best Practices:
+  🔶Use template literals (`) for better readability.
+  🔶Use trim() to clean user input.
+  🔶Use includes() instead of indexOf() for readability.
+  🔶Use split() when handling CSV or space-separated data.
+
