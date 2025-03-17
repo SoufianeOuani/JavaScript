@@ -1,0 +1,77 @@
+📌Convert Number to Text in JavaScript
+There are different ways to convert a number into text (string) in JavaScript. Here are the most common methods:
+
+1️⃣Using toString()
+The .toString() method converts a number into a string.
+
+ _____________________________________________________________
+|  let num = 123;                                             | 
+|  let str = num.toString();                                  |
+|  console.log(str); // "123"                                 | 
+|  console.log(typeof str); // "string"                       | 
+|_____________________________________________________________|
+
+
+2️⃣Using String()
+The String() function also converts a number to a string.
+ _______________________________________________________________
+|  let num = 456;                                               | 
+|  let str = String(num);                                       | 
+|  console.log(str); // "456"                                   | 
+|  console.log(typeof str); // "string"                         | 
+|_______________________________________________________________|
+
+
+3️⃣Using Template Literals (` `)
+Using backticks (`) is a simple way to convert a number to a string.
+
+ _______________________________________________________________
+|  let num = 789;                                               |   
+|  let str = `${num}`;                                          |  
+|  console.log(str); // "789"                                   | 
+|  console.log(typeof str); // "string"                         | 
+|_______________________________________________________________|
+
+
+4️⃣Using .toFixed() (For Decimals)
+If you need to format a number with a specific number of decimal places, use .toFixed().
+
+ _______________________________________________________________
+|  let num = 5.6789;                                            |
+|  let str = num.toFixed(2); // Rounds to 2 decimal places      |
+|  console.log(str); // "5.68"                                  |
+|  console.log(typeof str); // "string"                         | 
+|_______________________________________________________________|
+
+
+5️⃣Using .toPrecision() (For Significant Digits)
+If you want to format the number based on significant digits:
+
+ _______________________________________________________________
+|  let num = 1234.567;                                          |
+|  let str = num.toPrecision(4); // Keeps 4 significant digits  |
+|  console.log(str); // "1235"                                  |
+|  console.log(typeof str); // "string"                         | 
+|_______________________________________________________________|
+
+
+6️⃣Converting Numbers to Words (Using Intl.NumberFormat)
+For more advanced conversion (e.g., numbers to words), use the Intl.NumberFormat API.
+ _________________________________________________________________________
+|  let num = 1234567;                                                     | 
+|  let formatter = new Intl.NumberFormat('en-US', { style: 'decimal' });  |
+|  console.log(formatter.format(num)); // "1,234,567"                     | 
+|_________________________________________________________________________|
+For converting numbers to words, you’ll need a custom function or an external library like number-to-words:
+ _________________________________________________________________________
+|  // Install the package first using: npm install number-to-words        | 
+|  const numberToWords = require('number-to-words');                      |
+|                                                                         |
+|  console.log(numberToWords.toWords(123)); // "one hundred twenty-three" |
+|_________________________________________________________________________|
+
+🔶Best Practices:
+  💠Use toString(), String(), or template literals for simple conversions.
+  💠Use .toFixed() for decimal formatting.
+  💠Use external libraries for converting numbers to words.
+
