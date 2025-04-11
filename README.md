@@ -1,2 +1,2 @@
 # JavaScript
-This repository is for JavaScript problem solving.
+This repository is for JavaScript courses.
