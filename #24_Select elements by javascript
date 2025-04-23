@@ -1,0 +1,100 @@
+مزيان بزاف سفيان، دابا غادي نشرحو **كيفاش تختار عنصر من الصفحة (HTML)** باستعمال **JavaScript**، ونديرو أمثلة بسيطة باش تكون واضحة 💡.
+
+---
+
+## ✅ كيفاش نختار عناصر HTML باستخدام JavaScript؟
+
+كاينين بزاف ديال الطرق، ولكن غادي نركزو على الأكثر استعمالاً:
+
+---
+
+### 🔹 1. `document.getElementById("id")`
+
+كيختار العنصر اللي عندو **id** معيّن.
+
+```html
+<p id="myText">السلام عليكم</p>
+```
+
+```js
+const p = document.getElementById("myText");
+console.log(p.textContent); // السلام عليكم
+```
+
+---
+
+### 🔹 2. `document.getElementsByClassName("className")`
+
+كيعطيك **مجموعة (HTMLCollection)** ديال العناصر اللي عندهم نفس الكلاس.
+
+```html
+<p class="msg">مرحبا</p>
+<p class="msg">بك</p>
+```
+
+```js
+const msgs = document.getElementsByClassName("msg");
+console.log(msgs[0].textContent); // مرحبا
+```
+
+---
+
+### 🔹 3. `document.getElementsByTagName("tagName")`
+
+كيجيب جميع العناصر من نوع معيّن (بحال `p`, `div`, إلخ):
+
+```html
+<p>جملة 1</p>
+<p>جملة 2</p>
+```
+
+```js
+const paragraphs = document.getElementsByTagName("p");
+console.log(paragraphs.length); // 2
+```
+
+---
+
+### 🔹 4. `document.querySelector("selector")`
+
+كيختار **أول عنصر** مطابق لـ CSS selector (بحال jQuery):
+
+```html
+<div class="box">Box</div>
+```
+
+```js
+const box = document.querySelector(".box");
+console.log(box.textContent); // Box
+```
+
+---
+
+### 🔹 5. `document.querySelectorAll("selector")`
+
+كيعطيك **جميع العناصر** اللي كيتوافقو مع selector.
+
+```html
+<p class="item">واحد</p>
+<p class="item">جوج</p>
+```
+
+```js
+const items = document.querySelectorAll(".item");
+items.forEach(item => console.log(item.textContent));
+```
+
+---
+
+## 🎯 مقارنة سريعة:
+
+| الطريقة | النتيجة | شنو كتختار؟ |
+|--------|--------|--------------|
+| `getElementById` | عنصر واحد | حسب `id` |
+| `getElementsByClassName` | HTMLCollection | حسب `class` |
+| `getElementsByTagName` | HTMLCollection | حسب `tag` |
+| `querySelector` | عنصر واحد | أول واحد يطابق CSS selector |
+| `querySelectorAll` | NodeList | جميع العناصر اللي كيطابقو CSS selector |
+
+---
+
