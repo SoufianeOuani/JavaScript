@@ -1,0 +1,104 @@
+برافو عليك سفيان، وصلنا لـ **DOM attributes** 💡  
+دابا نوريك كيفاش تتعامل مع **الخصائص ديال العناصر فـ DOM** باستخدام JavaScript: **تقرأهم، تبدلهم، تزيدهم، أو تحيدهم**.
+
+---
+
+## ✅ شنو هو DOM attribute؟
+
+هو **معلومة مرفقة** مع عنصر HTML، بحال:
+
+```html
+<img src="logo.png" alt="شعار الموقع" id="logo">
+```
+
+الـ `src` و `alt` و `id` كاملين هما **attributes**.
+
+---
+
+## 🧰 كيفاش نتعامل معهم فـ JavaScript؟
+
+### 🔹 1. `getAttribute("name")`  
+باش تقرا قيمة ديال attribute.
+
+```js
+const logo = document.getElementById("logo");
+console.log(logo.getAttribute("src")); // logo.png
+```
+
+---
+
+### 🔹 2. `setAttribute("name", "value")`  
+باش تغيّر أو تضيف attribute.
+
+```js
+logo.setAttribute("alt", "الشعار الجديد");
+logo.setAttribute("title", "لوغو الموقع");
+```
+
+---
+
+### 🔹 3. `removeAttribute("name")`  
+باش تحيد attribute.
+
+```js
+logo.removeAttribute("alt");
+```
+
+---
+
+### 🔹 4. `hasAttribute("name")`  
+باش تشوف واش العنصر عندو attribute معيّن.
+
+```js
+console.log(logo.hasAttribute("src")); // true
+```
+
+---
+
+## ✅ مثال عملي بسيط:
+
+```html
+<input type="text" id="username" placeholder="اكتب اسمك">
+```
+
+```js
+const input = document.getElementById("username");
+
+// قراءة النوع
+console.log(input.getAttribute("type")); // text
+
+// تغييره
+input.setAttribute("placeholder", "اسم المستخدم");
+
+// إضافة title
+input.setAttribute("title", "هذا الحقل إجباري");
+
+// حذف الـ type
+// input.removeAttribute("type");
+```
+
+---
+
+## ✅ شنو الفرق بين `attribute` و `property`؟
+
+| خاصية (Property) | سلوك برمجي مباشر | `element.value` |
+|------------------|------------------|------------------|
+| Attribute        | اللي مكتوب فـ HTML | `element.getAttribute("value")` |
+
+مثلاً:
+
+```html
+<input type="text" value="سفيان">
+```
+
+```js
+const input = document.querySelector("input");
+
+console.log(input.value); // سفيان ← value الحالية (property)
+console.log(input.getAttribute("value")); // سفيان ← القيمة الأصلية من HTML
+```
+
+لكن إلا غيرتي `input.value = "جديد"`, فـ `value` (property) تتبدل، ولكن `getAttribute("value")` تبقى كيف كانت حتى تعاود تكتبها بـ `setAttribute`.
+
+---
+
