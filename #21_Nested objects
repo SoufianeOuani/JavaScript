@@ -1,0 +1,106 @@
+ها أنت كتطور مزيان سفيان 💪! دابا غادي نشرحو **nested objects** فـ JavaScript — يعني **كائن داخل كائن** — بطريقة مفهومة وسلسة.
+
+---
+
+### ✅ **شنو هو nested object؟**
+
+**Nested Object** يعني كائن فيه خاصية (property) واللي هي بدورها كائن آخر.
+
+بحال فالحياة:  
+شخص عندو عنوان، والعنوان فيه مدينة، ورمز بريدي... فـ "العنوان" هنا راه object داخل object.
+
+---
+
+### 🔹 مثال بسيط:
+
+```js
+const person = {
+  name: "Sofiane",
+  age: 21,
+  address: {
+    city: "Khénifra",
+    zip: 54000,
+    location: {
+      lat: 32.93,
+      lng: -5.66
+    }
+  }
+};
+```
+
+---
+
+### 🧭 كيفاش نوصل لهاد البيانات؟
+
+#### 👉 خاصية عادية:
+
+```js
+console.log(person.name); // Sofiane
+```
+
+#### 👉 خاصية داخل object آخر:
+
+```js
+console.log(person.address.city); // Khénifra
+```
+
+#### 👉 خاصية داخل object ثالث (أكثر تعشيش):
+
+```js
+console.log(person.address.location.lat); // 32.93
+```
+
+---
+
+### 🔧 تعديل قيمة داخل nested object:
+
+```js
+person.address.city = "Fès";
+console.log(person.address.city); // Fès
+```
+
+---
+
+### ✅ for-in داخل nested object:
+
+إذا بغيت تطبع كلشي خاصك تدير التكرار داخل التكرار:
+
+```js
+for (let key in person.address.location) {
+  console.log(key + ": " + person.address.location[key]);
+}
+```
+
+---
+
+### 🌟 مثال عملي: منتج تقليدي
+
+```js
+const product = {
+  name: "طاجين",
+  price: 100,
+  details: {
+    madeIn: "Morocco",
+    artisan: {
+      name: "علي",
+      experience: "10 سنوات"
+    }
+  }
+};
+
+console.log(product.details.artisan.name); // علي
+```
+
+---
+
+### 🔚 الخلاصة:
+
+| المفهوم | المثال |
+|--------|--------|
+| Object عادي | `person.name` |
+| Nested Object | `person.address.city` |
+| Deep Nested | `person.address.location.lat` |
+
+---
+
+
