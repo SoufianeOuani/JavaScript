@@ -1,0 +1,92 @@
+لإنشاء **شريط تنقل (Navbar)** باستخدام JavaScript، يمكننا إنشاؤه ديناميكيًا دون كتابة HTML مباشر، أو جعله تفاعليًا (مثل إظهاره وإخفاؤه عند الضغط على زر).
+
+سأعطيك مثالين:
+
+---
+
+## ✅ **مثال 1: إنشاء Navbar بالكامل باستخدام JavaScript**
+
+```html
+<body>
+  <div id="nav-container"></div>
+
+  <script>
+    // إنشاء عناصر الشريط
+    const nav = document.createElement("nav");
+    nav.style.background = "#333";
+    nav.style.padding = "10px";
+
+    const ul = document.createElement("ul");
+    ul.style.listStyle = "none";
+    ul.style.display = "flex";
+    ul.style.gap = "20px";
+    ul.style.margin = "0";
+    ul.style.padding = "0";
+
+    const links = ["الرئيسية", "من نحن", "الخدمات", "اتصل بنا"];
+
+    links.forEach(text => {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.textContent = text;
+      a.href = "#";
+      a.style.color = "white";
+      a.style.textDecoration = "none";
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+
+    nav.appendChild(ul);
+    document.getElementById("nav-container").appendChild(nav);
+  </script>
+</body>
+```
+
+---
+
+## ✅ **مثال 2: Navbar قابل للإظهار والإخفاء (مثل قائمة موبايل)**
+
+```html
+<style>
+  #nav {
+    background-color: #333;
+    padding: 10px;
+    display: none; /* مخفي افتراضيًا */
+  }
+
+  #nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    display: block;
+  }
+
+  #toggle-btn {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+
+<button id="toggle-btn">☰ القائمة</button>
+<div id="nav">
+  <a href="#">الرئيسية</a>
+  <a href="#">الخدمات</a>
+  <a href="#">من نحن</a>
+  <a href="#">اتصل بنا</a>
+</div>
+
+<script>
+  const btn = document.getElementById("toggle-btn");
+  const nav = document.getElementById("nav");
+
+  btn.addEventListener("click", () => {
+    nav.style.display = nav.style.display === "block" ? "none" : "block";
+  });
+</script>
+```
+
+---
+
